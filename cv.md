@@ -5,8 +5,8 @@
 ## My Contact Info
 
 * **City:** *Moscow*
-* **LinkedIn:** *[Viacheslav Alpatov]*(https://www.linkedin.com/in/viacheslav-alpatov/)
-* **GitHub:** *[DonAlPatino]*(https://github.com/DonAlPatino)
+* **LinkedIn:** *[Viacheslav Alpatov](https://www.linkedin.com/in/viacheslav-alpatov/)*
+* **GitHub:** *[DonAlPatino](https://github.com/DonAlPatino)*
 
 
 ## About me
