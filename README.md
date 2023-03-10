@@ -1,2 +1,1 @@
-# rsschool-cv
-Rep for rsschool
+https://donalpatino.github.io/rsschool-cv/cv
