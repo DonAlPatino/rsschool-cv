@@ -23,7 +23,47 @@
 
 <p>I was IT Manager in small russian companies for long time. Now I want to become a software developer.</p>
 <hr>
+<h2>Skills</h2>
+
+<ul>
+  <li>Windows, Linux, MacOS, VMware …</li>
+  <li>SQL, MS SQL, Postgres, Oracle</li>
+  <li>Java/Spring (junior)</li>
+  <li>Python (junior)</li>
+  <li>HTML/CSS/JavaScript (junior)</li>
+  <li>… and all that managment staff</li>
+</ul>
+
+<hr>
+<h2>Code examples</h2>
+
+<pre class="highlight"><code><span class="kn">import</span> <span class="nn">org.hibernate.Session</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Component</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.transaction.annotation.Transactional</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">ru.alpatov.SpringShop.models.Book</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.persistence.EntityManager</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.persistence.PersistenceContext</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
 
 
+<span class="cm">/**
+ * @author Viacheslav Alpatov
+ */</span>
+<span class="nd">@Component</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BookDao</span> <span class="o">{</span>
+
+    <span class="nd">@PersistenceContext</span>
+    <span class="kd">private</span> <span class="nc">EntityManager</span> <span class="n">entityManager</span><span class="o">;</span>
+
+    <span class="nd">@Transactional</span><span class="o">(</span><span class="n">readOnly</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Book</span><span class="o">&gt;</span> <span class="nf">findOrderedBooks</span><span class="o">(){</span>
+        <span class="nc">Session</span> <span class="n">session</span> <span class="o">=</span> <span class="n">entityManager</span><span class="o">.</span><span class="na">unwrap</span><span class="o">(</span><span class="nc">Session</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+        <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Book</span><span class="o">&gt;</span> <span class="n">books</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createQuery</span><span class="o">(</span><span class="s">"select b from Book b join fetch b.purchases p join fetch p.account"</span><span class="o">).</span><span class="na">getResultList</span><span class="o">();</span>
+        <span class="k">return</span> <span class="n">books</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+<hr>
 </body>
 </html>
