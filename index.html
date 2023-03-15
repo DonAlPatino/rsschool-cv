@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Viacheslav Alpatov</title>
+</head>
+<body>
+    <h1>Viacheslav Alpatov</h1>
+    <p><img src="slava.png" alt="photo" title="А это я">></p>
+    <h2>My Contact Info</h2>
+
+<ul>
+  <li><strong>City:</strong> <em>Moscow</em></li>
+  <li><strong>LinkedIn:</strong> <em><a href="https://www.linkedin.com/in/viacheslav-alpatov/">Viacheslav Alpatov</a></em></li>
+  <li><strong>GitHub:</strong> <em><a href="https://github.com/DonAlPatino">DonAlPatino</a></em></li>
+  <li><strong>Discord:</strong> <em>Viacheslav(@DonAlPatino)</em></li>
+</ul>
+<hr>
+
+<h2>About me</h2>
+
+<p>I was IT Manager in small russian companies for long time. Now I want to become a software developer.</p>
+<hr>
+<h2>Skills</h2>
+
+<ul>
+  <li>Windows, Linux, MacOS, VMware …</li>
+  <li>SQL, MS SQL, Postgres, Oracle</li>
+  <li>Java/Spring (junior)</li>
+  <li>Python (junior)</li>
+  <li>HTML/CSS/JavaScript (junior)</li>
+  <li>… and all that managment staff</li>
+</ul>
+
+<hr>
+<h2>Code examples</h2>
+
+<pre class="highlight"><code><span class="kn">import</span> <span class="nn">org.hibernate.Session</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Component</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.transaction.annotation.Transactional</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">ru.alpatov.SpringShop.models.Book</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.persistence.EntityManager</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.persistence.PersistenceContext</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+
+
+<span class="cm">/**
+ * @author Viacheslav Alpatov
+ */</span>
+<span class="nd">@Component</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BookDao</span> <span class="o">{</span>
+
+    <span class="nd">@PersistenceContext</span>
+    <span class="kd">private</span> <span class="nc">EntityManager</span> <span class="n">entityManager</span><span class="o">;</span>
+
+    <span class="nd">@Transactional</span><span class="o">(</span><span class="n">readOnly</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Book</span><span class="o">&gt;</span> <span class="nf">findOrderedBooks</span><span class="o">(){</span>
+        <span class="nc">Session</span> <span class="n">session</span> <span class="o">=</span> <span class="n">entityManager</span><span class="o">.</span><span class="na">unwrap</span><span class="o">(</span><span class="nc">Session</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+        <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Book</span><span class="o">&gt;</span> <span class="n">books</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createQuery</span><span class="o">(</span><span class="s">"select b from Book b join fetch b.purchases p join fetch p.account"</span><span class="o">).</span><span class="na">getResultList</span><span class="o">();</span>
+        <span class="k">return</span> <span class="n">books</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+<hr>
+<h2>Experience</h2>
+
+<p>20 years of IT management</p>
+<hr>
+<h2>Education</h2>
+
+<ul>
+  <li><strong>The Russian University for Humanities, Moscow</strong>
+    <ul>
+      <li>Faculty of Information Technologies, graduate at information science</li>
+    </ul>
+  </li>
+  <li><strong>International Institute of Management LINK , Moscow</strong>
+    <ul>
+      <li>Presidential Managers’ Training Program- «Management in Business»</li>
+    </ul>
+  </li>
+</ul>
+<hr>
+<h2>Professional development, courses</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Year</th>
+      <th scope="col">Course Name</th>
+      <th scope="col">Academy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2023</td>
+      <td>Ansible - From Zero to Professional</td>
+      <td>Udemy</td>
+    </tr>
+    <tr>
+      <td>2022</td>
+      <td>“Websoft HСM Administrator. Advanced Level”</td>
+      <td>Globex IT</td>
+    </tr>
+    <tr>
+      <td>2022</td>
+      <td>Introduction to enterprise Java development</td>
+      <td>Innopolis University, java junior developer</td>
+    </tr>
+    <tr>
+      <td>2021</td>
+      <td>MS-030T00-A: Office 365 Administrator</td>
+      <td>Softline</td>
+    </tr>
+    <tr>
+      <td>2021</td>
+      <td>MS-101T00: Microsoft 365 Mobility and Security</td>
+      <td>Softline</td>
+    </tr>
+    <tr>
+      <td>2021</td>
+      <td>MS-500T00-A - Microsoft 365 Security Administration</td>
+      <td>Softline</td>
+    </tr>
+    <tr>
+      <td>2021</td>
+      <td>MS-700T00: Managing Microsoft Teams</td>
+      <td>Softline</td>
+    </tr>
+    <tr>
+      <td>2016</td>
+      <td>DevOps: What, Why, and How. An Introduction to DevOps</td>
+      <td>EMC Education Service</td>
+    </tr>
+    <tr>
+      <td>2016</td>
+      <td>«Web technology» (Python Django)</td>
+      <td>mail.ru/stepic.org</td>
+    </tr>
+    <tr>
+      <td>2015</td>
+      <td>Online school for android developers</td>
+      <td>E-legion &amp;Google</td>
+    </tr>
+    <tr>
+      <td>2014</td>
+      <td>Professional work in 1C:Payroll and HR 8 ed.3</td>
+      <td>Profbuh, certificate</td>
+    </tr>
+    <tr>
+      <td>2013</td>
+      <td>IT Management with clouds</td>
+      <td>CIO Academy</td>
+    </tr>
+    <tr>
+      <td>2012</td>
+      <td>Data conversion in 1C</td>
+      <td>1C</td>
+    </tr>
+    <tr>
+      <td>2012</td>
+      <td>Integration and data exchange in 1C</td>
+      <td>1C</td>
+    </tr>
+    <tr>
+      <td>2011</td>
+      <td>«IT security»</td>
+      <td>Inforzashita</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

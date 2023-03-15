@@ -1,0 +1,81 @@
+body {
+    color: Black;
+    border: 1em solid #ababab;
+    padding: 1%;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h1, h2 {
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+table {
+    display: block;
+    width: 100%;
+    overflow: auto
+}
+
+table th {
+    font-weight: 600
+}
+
+table th, table td {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5
+}
+
+
+.highlight .kn {
+    color: #000000;
+    font-weight: bold
+}
+
+.highlight .nn {
+    color: #555555
+}
+
+.highlight .o {
+    color: #000000;
+    font-weight: bold
+}
+
+.highlight .nd {
+    color: #3c5d5d;
+    font-weight: bold
+}
+
+.highlight .cm {
+    color: #999988;
+    font-style: italic
+}
+
+
+.highlight .kd {
+    color: #000000;
+    font-weight: bold
+}
+
+.highlight .nc {
+    color: #445588;
+    font-weight: bold
+}
+
+.highlight .kn {
+    color: #000000;
+    font-weight: bold
+}
+
+.highlight .nf {
+    color: #990000;
+    font-weight: bold
+}
+
+.highlight .k,.highlight .kv {
+    color: #000000;
+    font-weight: bold
+}
