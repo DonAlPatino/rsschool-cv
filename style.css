@@ -14,9 +14,21 @@ h1, h2 {
     margin-top: 1em;
 }
 
-.highlight {
-    margin-bottom: 16px
+table {
+    display: block;
+    width: 100%;
+    overflow: auto
 }
+
+table th {
+    font-weight: 600
+}
+
+table th, table td {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5
+}
+
 
 .highlight .kn {
     color: #000000;
